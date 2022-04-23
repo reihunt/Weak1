@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+	background-color: #FED2DE;
+}
+
+* {
+	font-family: 'Inter', sans-serif;
+}
+
+.bg-light {
+	background-color: #FED2DE !important;
+}
+
+.navbar-text {
+	font-weight: bolder;
+	font-size: 1.4rem;
+}
+
+.btn-dark {
+	font-weight: bolder !important;
+	font-size: 1.4rem !important;
+	color: #FED2DE !important;
+	border-radius: 2.1875rem;
+	padding-left: 23px !important;
+	padding-right: 23px !important;
+}
+.btn-light {
+	font-weight: bolder !important;
+	font-size: 1.4rem !important;
+	background-color: #FED2DE !important;
+	color: #FD87A7 !important;
+	border-radius: 2.1875rem;
+	border-width: 3px;
+	padding-left: 23px !important;
+	padding-right: 23px !important;
+}
+
+#btn-search {
+	background-color: white;
+	border-radius: 0px 10px 10px 0px;
+}
+
+.search-input {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-radius: 10px 0px 0px 10px;
+	width: 28.89rem;
+	height: 2.5rem;
+}
+
+#motiv {
+	margin-top: 8rem;
+}
+
+#motiv h1{
+	font-weight: bold;
+	font-size: 6rem;
+}
+
+#members {
+	margin-top: 1rem;
+	margin-left: 4rem;
+}
+
+#members h1{
+	font-weight: bolder;
+	font-size: 3.3rem;
+	color: #FF7A00;
+}
+
+
+.btn-pink {
+	font-weight: bolder;
+	font-size: 1.4rem;
+	background-color: #FD87A7;
+	color: white;
+	border-radius: 1rem;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.info-card {
+	padding: 4rem !important;
+}
+
+
+

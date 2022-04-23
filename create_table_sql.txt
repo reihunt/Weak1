@@ -1,0 +1,6 @@
+create table profile (
+	id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    image_link varchar(500),
+    name varchar(100),
+    description varchar(500)
+);
