@@ -12,7 +12,7 @@ session_start();
 if(isset($_POST['update'])) {
 	$userNewName        =    $_POST['userName'];
 	$userNewDescription =    $_POST['userDescription'];
-	$userImageLink          =   $_POST['imageLink'];
+	$userImageLink      =    escapeshellcmd($_POST['imageLink']);
 
 	if(!empty($userNewName)) {
 		$fileExtension = end(explode('.',$userImageLink));
@@ -20,14 +20,15 @@ if(isset($_POST['update'])) {
 			//Process Image
 			if($fileSize < 5000000) {
 				$imageName = end(explode('/',$userImageLink)); 
-				$fileSavePath = "../public/userImages/".$imageName;
 				$fileNewName = "public/userImages/".$imageName;
 				//Use wget to download file from link
 				exec("cd ../public/userImages/; wget \"{$userImageLink}\"", $output, $retval);
 
 				if(!$retval) {
-					$sql = "INSERT INTO profile (image_link, name, description) VALUES ('$fileNewName', '$userNewName', '$userNewDescription')";
-					$results = mysqli_query($connection,$sql);
+					$stmt = $connection->prepare('INSERT INTO profile (image_link, name, description) VALUES (?, ?, ?)');
+					$stmt->bind_param('sss', $fileNewName, $userNewName, $userNewDescription); 
+					$stmt->execute();
+					$stmt->close();
 					header('Location:../create_profile.php?success=userUpdated');
 					exit;
 				}
