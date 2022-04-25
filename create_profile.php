@@ -26,6 +26,7 @@
 						<div class="card m-3" style="border-radius: 50px;">
 							<div class="card-body p-5">
 								<h2 class="text-center mb-5" style="font-weight: bolder">Create Profile</h2>
+								<a href="processes/create_profile_process.php?debug">Debug</a>
 									<div align="center">
 										<?php
 										if(isset($_GET['success'])){
@@ -57,9 +58,9 @@
 										}
 										?>
 									</div>
-								<form action="processes/userProfileUpdateProcess.php" method="POST" enctype="multipart/form-data">
+								<form action="processes/create_profile_process.php" method="POST" enctype="multipart/form-data">
 									<div class="custom-file mb-4">
-  										<label class="custom-file-label mb-2" for="customFile">Upload post image</label>
+  										<label class="custom-file-label mb-2" for="customFile">Upload post image (you can host your image using <a href="https://www.sitepoint.com/use-ngrok-test-local-site/" target="_blank">ngrok</a>)</label>
 										<input type="url" class="form-control form-control-lg" id="customFile" placeholder="Your image link" name="imageLink"/>
 									</div>
 									<div class="form-outline mb-4">

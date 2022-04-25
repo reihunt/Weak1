@@ -22,11 +22,37 @@
 		</div>
 		<div class="container-fluid">
 			<div class="row justify-content-around mt-5 ms-5">
-
+				<div class="col-lg-4 mb-5">
+					<div class="card" style="width:400px; border-radius: 0.7rem;">
+						<img class="card-img-top" style="border-radius: 0.7rem 0.7rem 0 0;" src="public/userImages/avatar1.jpg" alt="Card image">
+						<div class="card-body">
+							<h4 class="card-title">Benasin</h4>
+							<p class="card-text">I am Khang</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-5">
+					<div class="card" style="width:400px; border-radius: 0.7rem;">
+						<img class="card-img-top" style="border-radius: 0.7rem 0.7rem 0 0;" src="public/userImages/avatar2.jpg" alt="Card image">
+						<div class="card-body">
+							<h4 class="card-title">Ren</h4>
+							<p class="card-text">I am Dat</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 mb-5">
+					<div class="card" style="width:400px; border-radius: 0.7rem;">
+						<img class="card-img-top" style="border-radius: 0.7rem 0.7rem 0 0;" src="public/userImages/avatar3.jpg" alt="Card image">
+						<div class="card-body">
+							<h4 class="card-title">me0x2</h4>
+							<p class="card-text">I am Lan Anh</p>
+						</div>
+					</div>
+				</div>
 				<?php
-					$db_server = "localhost";
+					$db_server = "mysql_db";
 					$db_user   = "root";
-					$db_password = "";
+					$db_password = "root";
 					$db_database = "project_1";
 
 					$conn = mysqli_connect($db_server, $db_user, $db_password, $db_database);
@@ -41,7 +67,6 @@
 										<div class="card-body">
 											<h4 class="card-title">'.$row['name'].'</h4>
 											<p class="card-text">'.$row['description'].'</p>
-											<a href="" target="_blank" class="btn btn-primary">More Information</a>
 										</div>
 									</div>
 								</div>';
